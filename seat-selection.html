@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Airline Booking - Seat Selection</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 min-h-screen flex flex-col">
+
+    <main class="flex-grow container mx-auto p-6 max-w-5xl">
+        <h1 class="text-4xl font-extrabold text-white mb-8 text-center drop-shadow-lg">Select Your Seat</h1>
+
+        <section class="bg-white rounded-xl shadow-xl p-8">
+            <h2 class="text-2xl font-semibold mb-6 text-indigo-700">Choose Your Seat(s)</h2>
+            <div id="flight-summary" class="mb-6 text-gray-700"></div>
+
+            <div id="seat-map" class="grid grid-cols-7 gap-3 justify-center">
+                <!-- Seats will be generated here dynamically -->
+            </div>
+
+            <div class="mt-8 flex justify-between items-center">
+                <div class="space-x-4">
+                    <span class="inline-flex items-center gap-2">
+                        <div class="w-5 h-5 bg-green-500 rounded-sm"></div>
+                        <span class="text-gray-700">Available</span>
+                    </span>
+                    <span class="inline-flex items-center gap-2">
+                        <div class="w-5 h-5 bg-red-500 rounded-sm"></div>
+                        <span class="text-gray-700">Occupied</span>
+                    </span>
+                    <span class="inline-flex items-center gap-2">
+                        <div class="w-5 h-5 bg-indigo-600 rounded-sm"></div>
+                        <span class="text-gray-700">Selected</span>
+                    </span>
+                </div>
+                <button id="confirm-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition flex items-center gap-2">
+                    <i class="fas fa-check"></i> Confirm Seats
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://odoe.studio" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 bg-white bg-opacity-70 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold shadow-md hover:bg-opacity-100 transition">
+        Made by Odoe
+    </a>
+
+    <script src="js/seat-selection.js"></script>
+</body>
+</html>
