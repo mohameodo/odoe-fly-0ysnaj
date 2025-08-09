@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Airline Booking - Flight Selection</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 min-h-screen flex flex-col">
+
+    <main class="flex-grow container mx-auto p-6 max-w-4xl">
+        <h1 class="text-4xl font-extrabold text-white mb-8 text-center drop-shadow-lg">Airline Booking System</h1>
+
+        <section class="bg-white rounded-xl shadow-xl p-8">
+            <h2 class="text-2xl font-semibold mb-6 text-indigo-700">Select Your Flight Details</h2>
+            <form id="flight-form" class="space-y-6">
+                <div>
+                    <label for="from" class="block mb-2 font-medium text-gray-700">From</label>
+                    <select id="from" name="from" required class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option value="">Select Departure</option>
+                        <option value="NYC">New York (NYC)</option>
+                        <option value="LAX">Los Angeles (LAX)</option>
+                        <option value="CHI">Chicago (CHI)</option>
+                        <option value="MIA">Miami (MIA)</option>
+                        <option value="DAL">Dallas (DAL)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="to" class="block mb-2 font-medium text-gray-700">To</label>
+                    <select id="to" name="to" required class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option value="">Select Destination</option>
+                        <option value="LAX">Los Angeles (LAX)</option>
+                        <option value="NYC">New York (NYC)</option>
+                        <option value="MIA">Miami (MIA)</option>
+                        <option value="DAL">Dallas (DAL)</option>
+                        <option value="CHI">Chicago (CHI)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date" class="block mb-2 font-medium text-gray-700">Date</label>
+                    <input type="date" id="date" name="date" required class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" min="2024-06-01" />
+                </div>
+                <div>
+                    <label for="passengers" class="block mb-2 font-medium text-gray-700">Passengers</label>
+                    <input type="number" id="passengers" name="passengers" min="1" max="7" value="1" required class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                </div>
+                <div class="pt-4">
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg shadow-md transition duration-300 flex items-center justify-center gap-3">
+                        <i class="fas fa-plane-departure"></i> Continue to Seat Selection
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <a href="https://odoe.studio" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 bg-white bg-opacity-70 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold shadow-md hover:bg-opacity-100 transition">
+        Made by Odoe
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
