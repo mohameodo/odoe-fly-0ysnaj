@@ -1,0 +1,31 @@
+/* Custom scrollbar for seat map */
+#seat-map::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+#seat-map::-webkit-scrollbar-thumb {
+    background-color: #6366f1; /* Indigo 600 */
+    border-radius: 4px;
+}
+#seat-map::-webkit-scrollbar-track {
+    background-color: #e0e7ff; /* Indigo 100 */
+}
+
+/* Seat styles beyond Tailwind for shape and cursor */
+.seat {
+    aspect-ratio: 1 / 1;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+.seat:hover:not(.occupied):not(.selected) {
+    transform: scale(1.1);
+    background-color: #4338ca; /* Indigo 700 */
+}
+.seat.occupied {
+    cursor: not-allowed;
+    background-color: #ef4444; /* Red 500 */
+}
+.seat.selected {
+    background-color: #4f46e5; /* Indigo 600 */
+}
